@@ -13,7 +13,9 @@
 	</head>
 
 	<body>
-			<!-- This is the top bit with the image. 
+	<style>
+	
+	</style>		<!-- This is the top bit with the image. 
 		I wonder why there's no image tag here? -->
 		<div class="whitebit"></div>
 
@@ -31,8 +33,25 @@
 
 		<!-- Let's put in a timer here -->
 		<script type="text/javascript">
+<<<<<<< HEAD
 var count = 30;
 var counter = setInterval(timer, 1000); 
+=======
+		var count = 30;
+		var counter = setInterval(timer, 1000); 
+		
+		function timer() {
+		    count = count - 1;
+		    if (count <= 0) {
+		        clearInterval(counter);
+		        alert("Boom!");
+		        document.getElementById('button').style.visibility = 'hidden';
+		        return;
+		    }
+		
+		    document.getElementById("timer").innerHTML = count + " secs";
+		}
+>>>>>>> 8865913693746c227d84e5de89407297f0367e59
 
 function timer() {
     count = count - 1;
@@ -49,9 +68,13 @@ function timer() {
 		
 		<!-- Let's put in the geolocation stuff here -->
 		<script type="text/javascript">
+<<<<<<< HEAD
 
 	
 	$(function () {
+=======
+		$(function () {
+>>>>>>> 8865913693746c227d84e5de89407297f0367e59
     $("#button").click(function () {
         getLocation();
     });
@@ -66,9 +89,17 @@ function getLocation() {
 }
 
 function showPosition(position) {
+<<<<<<< HEAD
 	$(".box1").html(position.coords.latitude);
 	$(".box2").html(position.coords.longitude);
 }
+=======
+    $(".box1").html(position.coords.latitude);
+    $(".box2").html(position.coords.longitude);
+} 
+
+getLocation();
+>>>>>>> 8865913693746c227d84e5de89407297f0367e59
 		</script>
 	</body>
 </html>
