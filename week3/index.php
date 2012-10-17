@@ -31,9 +31,8 @@ $query = "select * from books";
 // functional bits that never change.
 $result = mysql_query($query);
 while ($row = mysql_fetch_assoc($result)) {
-	echo "<p>".$row["title"]."</p>;
-	echo "<p>".$row["author"]."</p>;
-
+	echo "<p>".$row["title"]." by ".$row["author"]."</p>";
+	echo "<img src='".$row["image"]."'/>";
 }
 ?>
 
