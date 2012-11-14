@@ -1,0 +1,171 @@
+<ul data-role="listview" data-inset="true" data-split-icon="gear" data-split-theme="b">			
+				<li>
+					<h3> All Clothes </h3>
+					<ul data-theme="a">
+						<a href='addItem.php' data-transition='slideup' data-role="button"> back </a>
+						<?php
+							include("config.php");
+							$query = "SELECT * FROM clothing";
+							$result = mysql_query($query);
+							while ($row = mysql_fetch_assoc($result)) {
+								
+								echo "<li><a href='#'>";
+								echo "<img src=".$row["image"]." />";
+								echo "<h3>".$row["ClothingType"]." - ".$row["Color"]."</h3>";
+								echo "<p>".$row["Store"]." - ".$row["Style"]."</p>";
+								echo "</a><a href='.add' id=".$row['ItemNumber']." data-icon='plus' data-rel='popup' data-position-to='window' data-transition='pop'>";
+							    echo "</a></li>";
+								
+							} 
+						?>
+					</ul>
+				</li>
+				<li>
+					<h3> Sweaters </h3>
+					<ul data-theme="a">
+						<a href='addItem.php' data-transition='slideup' data-role="button"> back </a>
+						<?php
+							include("config.php");
+							$query = "SELECT * FROM clothing where ClothingType = 'sweater'";
+							$result = mysql_query($query);
+							while ($row = mysql_fetch_assoc($result)) {
+								
+								echo "<li><a href='#'>";
+								echo "<img src=".$row["image"]." />";
+								echo "<h3>".$row["ClothingType"]." - ".$row["Color"]."</h3>";
+								echo "<p>".$row["Store"]." - ".$row["Style"]."</p>";
+								echo "</a><a href='#add' id=".$row['ItemNumber']." data-icon='plus' data-rel='popup' data-transition='slideup'>";
+							    echo "</a></li>";
+								
+							} 
+						?>
+					</ul>
+				</li>
+				<li>
+					<h3> Coats </h3>
+					<ul data-theme="a">
+						<a href='addItem.php' data-transition='slideup' data-role="button"> back </a>
+						<?php
+							include("config.php");
+							$query = "SELECT * FROM clothing where ClothingType = 'coat'";
+							$result = mysql_query($query);
+							while ($row = mysql_fetch_assoc($result)) {
+								
+								echo "<li><a href='#'>";
+								echo "<img src=".$row["image"]." />";
+								echo "<h3>".$row["ClothingType"]." - ".$row["Color"]."</h3>";
+								echo "<p>".$row["Store"]." - ".$row["Style"]."</p>";
+								echo "</a><a href='#add' id=".$row['ItemNumber']." data-icon='plus' data-rel='popup' data-transition='slideup'>";
+							    echo "</a></li>";
+								
+							} 
+						?>
+					</ul>
+				</li>
+				<li>
+					<h3> Tops </h3>
+					<ul data-theme="a">
+						<a href='addItem.php' data-transition='slideup' data-role="button"> back </a>
+						<?php
+							include("config.php");
+							$query = "SELECT * FROM clothing where ClothingType = 'top'";
+							$result = mysql_query($query);
+							while ($row = mysql_fetch_assoc($result)) {
+								
+								echo "<li><a href='#'>";
+								echo "<img src=".$row["image"]." />";
+								echo "<h3>".$row["ClothingType"]." - ".$row["Color"]."</h3>";
+								echo "<p>".$row["Store"]." - ".$row["Style"]."</p>";
+								echo "</a><a href='#add' id=".$row['ItemNumber']." data-icon='plus' data-rel='popup' data-transition='slideup'>";
+							    echo "</a></li>";
+								
+							} 
+						?>
+					</ul>
+				</li>
+				<li>
+					<h3> Dresses </h3>
+					<ul data-theme="a">
+						<a href='addItem.php' data-transition='slideup' data-role="button"> back </a>
+						<?php
+							include("config.php");
+							$query = "SELECT * FROM clothing where ClothingType = 'dress'";
+							$result = mysql_query($query);
+							while ($row = mysql_fetch_assoc($result)) {
+								
+								echo "<li><a href='#'>";
+								echo "<img src=".$row["image"]." />";
+								echo "<h3>".$row["ClothingType"]." - ".$row["Color"]."</h3>";
+								echo "<p>".$row["Store"]." - ".$row["Style"]."</p>";
+								echo "</a><a href='#add' id=".$row['ItemNumber']." data-icon='plus' data-rel='popup' data-transition='slideup'>";
+							    echo "</a></li>";
+								
+							} 
+						?>
+					</ul>
+				</li>
+				<li>
+					<h3> Pants </h3>
+					<ul data-theme="a">
+						<a href='addItem.php' data-transition='slideup' data-role="button"> back </a>
+						<?php
+							include("config.php");
+							$query = "SELECT * FROM clothing where ClothingType = 'pants'";
+							$result = mysql_query($query);
+							while ($row = mysql_fetch_assoc($result)) {
+								
+								echo "<li><a href='#'>";
+								echo "<img src=".$row["image"]." />";
+								echo "<h3>".$row["ClothingType"]." - ".$row["Color"]."</h3>";
+								echo "<p>".$row["Store"]." - ".$row["Style"]."</p>";
+								echo "</a><a href='#add' id=".$row['ItemNumber']." data-icon='plus' data-rel='popup' data-transition='slideup'>";
+							    echo "</a></li>";
+								
+							} 
+						?>
+					</ul>
+				</li>
+				<li>
+					<h3> Shorts </h3>
+					<ul data-theme="a">
+						<a href='addItem.php' data-transition='slideup' data-role="button"> back </a>
+						<?php
+							include("config.php");
+							$query = "SELECT * FROM clothing where ClothingType = 'shorts'";
+							$result = mysql_query($query);
+							while ($row = mysql_fetch_assoc($result)) {
+								
+								echo "<li><a href='#'>";
+								echo "<img src=".$row["image"]." />";
+								echo "<h3>".$row["ClothingType"]." - ".$row["Color"]."</h3>";
+								echo "<p>".$row["Store"]." - ".$row["Style"]."</p>";
+								echo "</a><a href='#add' id=".$row['ItemNumber']." data-icon='plus' data-rel='popup' data-transition='slideup'>";
+							    echo "</a></li>";
+								
+							} 
+						?>
+					</ul>
+				</li>
+				<li>
+					<h3> Skirts </h3>
+					<ul data-theme="a">
+						<a href='addItem.php' data-transition='slideup' data-role="button"> back </a>
+						<?php
+							include("config.php");
+							$query = "SELECT * FROM clothing where ClothingType = 'skirt'";
+							$result = mysql_query($query);
+							while ($row = mysql_fetch_assoc($result)) {
+								
+								echo "<li><a href='#'>";
+								echo "<img src=".$row["image"]." />";
+								echo "<h3>".$row["ClothingType"]." - ".$row["Color"]."</h3>";
+								echo "<p>".$row["Store"]." - ".$row["Style"]."</p>";
+								echo "</a><a href='#add' id=".$row['ItemNumber']." data-icon='plus' data-rel='popup' data-transition='slideup'>";
+							    echo "</a></li>";
+								
+							} 
+						?>
+					</ul>
+				</li>
+
+			</ul>
